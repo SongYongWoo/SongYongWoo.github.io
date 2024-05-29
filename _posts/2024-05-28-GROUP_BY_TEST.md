@@ -11,6 +11,12 @@ sidebar :                     # 작성자 정보 노출 안 할시 사이드바 
 search : true  # false 지정시 해당 게시물 검색 불가
 ---
 
+
+
+
+
+
+
 ```sql
 -- 일간/시간당 매출
 select order_date "일자",
@@ -20,6 +26,8 @@ from order_list
 group by order_date, substr(order_time, 1, 2)
 order by 1, 2, 3 desc;
 ```
+
+
 
 ![image-20240528172823188](/images/2024-05-28-GROUP_BY_TEST/image-20240528172823188.png)
 
