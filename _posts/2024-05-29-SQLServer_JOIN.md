@@ -90,4 +90,15 @@ from B;
 
 
 
+```sql
+-- 다른 데이터베이스에선 except 대신 minus 사용
+select c1, c2
+from A
+minus
+select c1, c2
+from B;
+```
+
+
+
 ※ 세로 결합 시, 컬럼의 데이터 타입과 갯수가 일치해야 함.
