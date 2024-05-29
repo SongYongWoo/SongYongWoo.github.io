@@ -107,3 +107,9 @@ from B;
 ```
 
 ![image-20240529132021189](/images/2024-05-29-JOIN/image-20240529132021189.png)
+
+
+
+
+
+※ MySql은 FULL OUTER JOIN을 지원하지 않음.
