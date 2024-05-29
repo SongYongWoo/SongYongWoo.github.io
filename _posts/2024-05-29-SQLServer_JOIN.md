@@ -1,8 +1,8 @@
 ---
 layout: single
-title:  "[SQL Server] JOIN"
+title:  "[SQL Server] JOIN, INTERSECT, EXCEPT"
 categories : SQL
-tag : [SQL Server, JOIN]
+tag : [SQL Server, JOIN, INTERSECT, EXCEPT]
 typora-root-url: ../
 toc: true                     # 글 목차
 author_profile : false        # 게시물에서 작성자 정보 노출 유무
@@ -51,3 +51,43 @@ on A.c1 = B.c1;
 ```
 
 ![image-20240529210947991](/images/2024-05-29-SQLServer_JOIN/image-20240529210947991.png)
+
+
+
+### INTERSECT
+
+세로로 결합. 중복되는 값만 출력
+
+<img src="/images/2024-05-29-SQLServer_JOIN/image-20240529213836081.png" alt="image-20240529213836081" style="zoom:25%;" />
+
+```sql
+select c1, c2
+from A
+intersect
+select c1, c2
+from B;
+```
+
+![image-20240529213733252](/images/2024-05-29-SQLServer_JOIN/image-20240529213733252.png)
+
+
+
+### EXCEPT
+
+세로로 결합. 위 테이블 내용 중 아래 테이블에 없는 내용만 출력
+
+<img src="/images/2024-05-29-SQLServer_JOIN/image-20240529214100975.png" alt="image-20240529214100975" style="zoom:25%;" />
+
+```sql
+select c1, c2
+from A
+except
+select c1, c2
+from B;
+```
+
+![image-20240529214138449](/images/2024-05-29-SQLServer_JOIN/image-20240529214138449.png)
+
+
+
+※ 세로 결합 시, 컬럼의 데이터 타입과 갯수가 일치해야 함.
