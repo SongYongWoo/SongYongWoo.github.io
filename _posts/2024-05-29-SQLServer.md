@@ -17,7 +17,7 @@ search : true  # false 지정시 해당 게시물 검색 불가
 
 ```sql
 -- 사용할 데이터베이스 언급
-use [데이터베이스];
+use 데이터베이스;
 
 -- 기본 조회식
 select 컬럼 from 테이블
